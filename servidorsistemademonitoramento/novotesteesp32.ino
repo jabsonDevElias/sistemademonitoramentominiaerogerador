@@ -7,8 +7,8 @@
 ACS712 sensor(ACS712_05B, 34);
 
 
-const char* ssid = "ALenda02";
-const char* password = "12032012";
+const char* ssid = "seunomederedewifi";
+const char* password = "senhadoseuwifi";
 
 WebServer server(80);
 WebSocketsServer webSocket = WebSocketsServer(81);
