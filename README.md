@@ -4,12 +4,10 @@ Este projeto é um painel em tempo real para monitoramento de um **mini aerogera
 
 ## ⚠️ Importante
 
-> 🟡 **O servidor hospedado no ESP32 deve estar ligado e funcionando corretamente para que o painel receba os dados.**  
-> 🔧 Você deve **copiar o IP exibido no monitor serial da IDE do Arduino** (como `192.168.1.x`) e **substituir no código Node.js**, na linha onde está a requisição `axios.get(...)`:
+- 🔌 **O servidor embarcado no ESP32 deve estar ligado e funcionando para que o painel exiba os dados.**
+- 📡 **Você deve subir o código que está na pasta `servidorsistemademonitoramento` para a sua placa ESP32 usando a IDE do Arduino.**
+- 🌐 **Após subir, copie o IP que aparecer no monitor serial da IDE** (por exemplo, `192.168.1.7`) e **altere o código no Node.js**, substituindo na linha do `axios.get(...)`:
 
-```js
-axios.get('http://SEU-IP-AQUI/')
-```
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -17,6 +15,7 @@ axios.get('http://SEU-IP-AQUI/')
 - Express
 - Socket.io
 - ESP32 (ESP-WROOM-32)
+- Sensor de Tensão ACS712
 - HTML, CSS, JavaScript
 
 ---
@@ -56,5 +55,11 @@ node server.js
 http://localhost:9999
 ````
 ![Você deve conseguir vê isso](galeria/01.png)
+
+Esquema para usar na sua placa:
+---
+![Esquema para usar na sua placa: ](galeria/02.png)
+---
+![Gif Explicando: ](galeria/03.gif)
 
 
